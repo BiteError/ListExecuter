@@ -54,6 +54,7 @@ namespace ListExecuter
                     x.Split(' ')
                     .Where(y => y.Length > 0)
                     .Select(y => int.Parse(y))
+                    .Where(z => z!= 0)
                     .ToList());
             var result = rr.Select(x =>
                 x.Any(o => o != x[0]) 
